@@ -20,11 +20,13 @@ const config: Config = {
         "primary-pink": "#E50F8D",
         "primary-blue": "#267FF5",
         "primary-blue-dark": "#100D38",
+        "primary-bg": "#FBFBFB",
       },
       borderRadius: {
         sm: "6px",
         md: "12px",
         lg: "16px",
+        xl: "25px",
       },
     },
   },

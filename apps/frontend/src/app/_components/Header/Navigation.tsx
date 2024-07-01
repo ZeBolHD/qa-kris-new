@@ -8,6 +8,9 @@ const Navigation = () => {
           </a>
         </li>
         <li>
+          <a href="#program">Программа</a>
+        </li>
+        <li>
           <a href="#about">Об авторе</a>
         </li>
         <li>
