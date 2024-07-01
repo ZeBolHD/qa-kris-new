@@ -17,7 +17,7 @@ const ConsultationButton = ({
     <a href={href} target="_blank">
       <button
         className={cn(
-          "text-[20px] font-bold bg-transparent border-2 text-white border-primary-pink rounded-full px-[28px] py-[15px]",
+          "text-[18px] font-bold bg-transparent border-2 text-white border-primary-pink rounded-full px-[28px] py-[15px]",
           !transparent && "bg-primary-pink",
           className,
         )}
