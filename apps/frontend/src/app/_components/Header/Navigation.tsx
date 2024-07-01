@@ -14,7 +14,7 @@ const Navigation = () => {
           <a href="#about">Об авторе</a>
         </li>
         <li>
-          <a href="#q&a">Вопрос-ответ</a>
+          <a href="#faq">Вопрос-ответ</a>
         </li>
         <li>
           <a href="#reviews">Отзывы</a>
