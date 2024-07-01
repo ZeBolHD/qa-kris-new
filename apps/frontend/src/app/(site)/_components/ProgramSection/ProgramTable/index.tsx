@@ -19,8 +19,8 @@ const ProgramTable = ({ programs }: ProgramTableProps) => {
           </tr>
         </thead>
         <tbody>
-          {programs.map((program) => (
-            <ProgramTableRow key={program.title} {...program} />
+          {programs.map((program, index) => (
+            <ProgramTableRow key={index} {...program} />
           ))}
         </tbody>
       </table>

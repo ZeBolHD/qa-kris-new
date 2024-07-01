@@ -8,8 +8,8 @@ interface ProgramDescriptionAdvantageListProps {
 const ProgramDescriptionAdvantageList = ({ advantages }: ProgramDescriptionAdvantageListProps) => {
   return (
     <ul className="mt-[16px] w-full flex flex-col gap-[16px]">
-      {advantages.map((advantage) => (
-        <ProgramDescriptionAdvantageListItem key={advantage.text} {...advantage} />
+      {advantages.map((advantage, index) => (
+        <ProgramDescriptionAdvantageListItem key={index} {...advantage} />
       ))}
     </ul>
   );

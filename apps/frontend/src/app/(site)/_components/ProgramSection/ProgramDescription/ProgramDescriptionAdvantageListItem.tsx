@@ -5,7 +5,7 @@ const ProgramDescriptionAdvantageListItem = ({ text }: ProgramAdvantage) => {
   return (
     <li className="flex items-center gap-[12px]">
       <Image
-        src="/program/advantage-mark.svg"
+        src="/advantage-mark.svg"
         width={32}
         height={32}
         alt=""
