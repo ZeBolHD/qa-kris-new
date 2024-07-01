@@ -1,12 +1,12 @@
+import AboutSectionDescription from "./AboutDescription";
 import AboutPhoto from "./AboutPhoto";
 
 const AboutSection = () => {
   return (
     <section id="about" className="py-[120px] bg-primary-bg">
       <div className="container flex justify-between items-center">
-        <AboutPhoto image="" />
-        {/* <AboutSectionHeading text="О курсе" />
-        <AboutSectionText text="Описание курса" /> */}
+        <AboutPhoto image="https://img3.teletype.in/files/ec/bc/ecbcdbce-c70d-4ede-9005-e70b80167632.png" />
+        <AboutSectionDescription />
       </div>
     </section>
   );

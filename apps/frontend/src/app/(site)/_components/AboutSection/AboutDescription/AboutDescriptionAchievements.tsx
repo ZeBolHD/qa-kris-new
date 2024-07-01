@@ -1,3 +1,0 @@
-interface AboutDescriptionAchievementsProps {}
-
-const AboutDescriptionAchievements = () => {};
