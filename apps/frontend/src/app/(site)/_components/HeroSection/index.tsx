@@ -1,10 +1,12 @@
 import ConsultationButton from "@/app/_components/ConsultationButton";
 import Heading from "./Heading";
+import BackgroundPatterns from "./BackgrounPatterns";
 
 const HeroSection = () => {
   return (
     <>
-      <section className="container text-white h-[800px]">
+      <section className="container text-white h-[800px] relative">
+        <BackgroundPatterns />
         <Heading />
         <div className="mt-[50px] flex flex-col justify-center items-center gap-[30px]">
           <p className="text-[22px] font-light">Индивидуальное менторство с доведением до оффера</p>

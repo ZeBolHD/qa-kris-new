@@ -1,12 +1,12 @@
 import AdvantageList from "./AdvantageList";
+import BackgroundPatterns from "./BackgroundPatterns";
 import { advantages } from "./types";
 
 const AdvantagesSection = () => {
   return (
-    <section className="p-[75px]">
-      <div className="container">
-        <AdvantageList advantages={advantages} />
-      </div>
+    <section className="py-[75px] container relative">
+      <BackgroundPatterns />
+      <AdvantageList advantages={advantages} />
     </section>
   );
 };

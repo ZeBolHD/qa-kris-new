@@ -4,7 +4,7 @@ import { achievements } from "./types";
 
 const AboutSectionDescription = () => {
   return (
-    <div className="w-[460px]">
+    <div className="w-[460px] z-50">
       <div>
         <h2 className="text-[42px] font-bold">Об авторе курса</h2>
         <p className="text-[25px] mt-[16px] font-medium">Кристина петрова, Senior QA Manual</p>

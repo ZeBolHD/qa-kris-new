@@ -10,7 +10,7 @@ import GetStartedSection from "./_components/GetStartedSection";
 
 export default function HomePage() {
   return (
-    <div className="text-4xl">
+    <>
       <BackgroundGradient />
       <HeroSection />
       <AdvantagesSection />
@@ -20,6 +20,6 @@ export default function HomePage() {
       <FAQSection />
       <PricingSection />
       <GetStartedSection />
-    </div>
+    </>
   );
 }
