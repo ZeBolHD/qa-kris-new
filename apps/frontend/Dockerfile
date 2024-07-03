@@ -10,10 +10,10 @@ ENV PATH="$PNPM_HOME:$PATH"
 
 RUN npm install -g pnpm --force
 RUN pnpm install -g turbo
-COPY . .
-RUN pnpm turbo prune --scope=frontend --docker
-
+COPY ./package.json ./pnpm-lock.yaml ./
 RUN corepack enable
 RUN pnpm install
+
+RUN pnpm turbo prune --scope=frontend --docker
 
 CMD pnpm turbo run build --filter=frontend && cd apps/frontend && pnpm start
