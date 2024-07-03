@@ -18,4 +18,6 @@ COPY . .
 
 RUN pnpm turbo prune --scope=frontend --docker
 
+RUN pnpm install
+
 CMD pnpm turbo run build --filter=frontend && cd apps/frontend && pnpm start
