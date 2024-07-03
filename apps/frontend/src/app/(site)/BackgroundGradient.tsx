@@ -1,6 +1,6 @@
 const BackgroundGradient = () => {
   return (
-    <div className="max-h-[80vh] absolute inset-0 -z-10 bg-gradient-to-tr from-primary-pink from-20% via-primary-blue via-50% to-primary-blue-dark to-80%">
+    <div className="h-[1250px] absolute inset-0 -z-10 bg-gradient-to-tr from-primary-pink from-20% via-primary-blue via-50% to-primary-blue-dark to-80%">
       <div
         className="w-full h-full opacity-90"
         style={{
