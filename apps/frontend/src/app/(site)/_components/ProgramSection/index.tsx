@@ -12,7 +12,9 @@ const ProgramSection = () => {
           text="Тут нужно придумать какое-то описание курса, примерно на две строчки"
           advantages={programAdvantages}
         />
-        <ProgramTable programs={programs} />
+        <div className="flex items-center">
+          <ProgramTable programs={programs} />
+        </div>
       </div>
     </section>
   );

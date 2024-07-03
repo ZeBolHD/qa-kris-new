@@ -8,8 +8,8 @@ interface ProgramTableProps {
 
 const ProgramTable = ({ programs }: ProgramTableProps) => {
   return (
-    <div className="w-[560px] rounded-xl bg-white min-h-full px-[24px] z-50">
-      <table className="table-auto w-full border-separate border-spacing-0 border-spacing-y-3.5">
+    <div className="w-[560px] rounded-xl bg-white h-fit px-[10px] z-50">
+      <table className="table-auto w-full border-separate border-spacing-0 border-spacing-y-3.5 border-spacing-x-[10px]">
         <thead>
           <tr className="w-full text-[13px] h-fit">
             <ProgramTableColumnHeading text="" />
