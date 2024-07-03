@@ -5,9 +5,12 @@ import { Question } from "../types";
 import Image from "next/image";
 import { cn } from "@/lib/util";
 
-const QuestionListItem = ({ title, text }: Question) => {
-  const [isOpen, setIsOpen] = useState(false);
+interface QuestionListItemProps extends Question {
+  isOpen: boolean;
+  handleOpen: () => void;
+}
 
+const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemProps) => {
   const answerRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -16,10 +19,6 @@ const QuestionListItem = ({ title, text }: Question) => {
       setContentHeight(answerRef.current.clientHeight);
     }
   }, [isOpen]);
-
-  const handleOpen = () => {
-    setIsOpen((prev) => !prev);
-  };
 
   return (
     <li
