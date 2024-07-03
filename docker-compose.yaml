@@ -1,0 +1,10 @@
+services:
+  frontend-new:
+    container_name: frontend-new
+    build:
+      context: .
+      dockerfile: "./apps/frontend/Dockerfile"
+    ports:
+      - "3600:3000"
+    env_file:
+      - .env
