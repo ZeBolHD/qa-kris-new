@@ -11,7 +11,7 @@ interface QuestionListProps {
 const QuestionList = ({ questions }: QuestionListProps) => {
   const [currentOpenQuestionIndex, setCurrentOpenQuestionIndex] = useState<number | null>();
 
-  const handleOpen = (questionIndex: number) => {
+  const handleOpenQuestion = (questionIndex: number) => {
     if (currentOpenQuestionIndex === questionIndex) {
       setCurrentOpenQuestionIndex(null);
     } else {
@@ -26,7 +26,7 @@ const QuestionList = ({ questions }: QuestionListProps) => {
           <QuestionListItem
             key={question.title}
             {...question}
-            handleOpen={() => handleOpen(index)}
+            handleOpen={() => handleOpenQuestion(index)}
             isOpen={currentOpenQuestionIndex === index}
           />
         ))}

@@ -40,11 +40,13 @@ const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemP
       </dt>
       <div
         style={{ maxHeight: isOpen ? contentHeight : 0 }}
-        className={cn("transition-all duration-300 overflow-hidden w-full")}
+        className={cn("transition-all duration-300 overflow-hidden w-full", isOpen && "mt-[10px]")}
       >
-        <dd ref={answerRef}>
-          <p className="text-[16px] font-light opacity-40 leading-snug">{text}</p>
-        </dd>
+        <div ref={answerRef}>
+          <dd>
+            <p className="text-[16px] font-light opacity-40 leading-snug">{text}</p>
+          </dd>
+        </div>
       </div>
     </li>
   );
