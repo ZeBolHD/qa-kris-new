@@ -9,9 +9,9 @@ const PricingListItems = ({ title, price, postPay, descriptions }: Service) => {
     >
       <div className="w-full">
         <div className="flex justify-between w-full items-end">
-          <p className="text-[48px] font-bold">{price}</p>
-          <p className="text-[16px] font-light opacity-50 justify-end">
-            {postPay ? "+ постоплата" : "без постоплаты"}
+          <p className="text-[46px] font-bold">{price}</p>
+          <p className="text-[14px] font-light opacity-50 justify-end">
+            {postPay ? postPay : "без постоплаты"}
           </p>
         </div>
         <h4 className="mt-[20px] text-[16px] font-light opacity-50">{title}</h4>
@@ -21,7 +21,7 @@ const PricingListItems = ({ title, price, postPay, descriptions }: Service) => {
         <DescriptionList descriptions={descriptions} />
       </div>
       <div className="mt-[30px]">
-        <a href="">
+        <a href="https://t.me/KQAwork" target="_blank">
           <button
             className="text-[18px] w-full py-[16px] border-[2px] text-primary-blue border-primary-blue rounded-sm font-medium
             transition-all duration-200 group-hover:bg-primary-blue group-hover:text-white"

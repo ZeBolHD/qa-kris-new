@@ -18,7 +18,7 @@ const ReviewCard = ({ text, author, image, position }: Review) => {
     <>
       <li
         className={
-          "flex flex-col min-w-[325px] gap-[10px] text-left text-black bg-white rounded-md p-[24px] hover:shadow-xl transition-all duration-300"
+          "flex flex-col w-[340px] gap-[10px] text-left text-black bg-white rounded-md p-[24px] hover:shadow-xl transition-all duration-300"
         }
       >
         <ReviewCardHeading author={author} image={image} position={position} />
@@ -35,7 +35,7 @@ const ReviewCard = ({ text, author, image, position }: Review) => {
         <Modal onClose={toggleModal} isOpen={isReadingMore}>
           <div>
             <h4 className="font-bold">{author}</h4>
-            <p className="mt-[14px] whitespace-pre-line text-[18px]">{text}</p>
+            <p className="mt-[14px] whitespace-pre-line text-[16px] leading-tight">{text}</p>
           </div>
         </Modal>
       )}

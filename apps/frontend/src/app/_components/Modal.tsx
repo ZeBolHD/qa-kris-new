@@ -31,7 +31,7 @@ const Modal = ({ children, isOpen, onClose }: ModalProps) => {
         onClick={handleClose}
         className="fixed inset-0 flex items-center z-[999] justify-center bg-black bg-opacity-60"
       >
-        <div className="relative p-[40px] w-[650px] min-h-[480px] bg-white rounded-lg text-[20px] font-light z-50 animate-rise-up">
+        <div className="relative p-[40px] w-[650px] min-h-[480px] max-h-[750px] overflow-y-auto bg-white rounded-lg text-[20px] font-light z-50 animate-rise-up">
           <Image
             src="/close.svg"
             alt="close"

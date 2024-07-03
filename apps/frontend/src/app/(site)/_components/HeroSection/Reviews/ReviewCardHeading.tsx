@@ -9,8 +9,6 @@ interface ReviewCardHeadingProps {
 const ReviewCardHeading = ({ author, image, position }: ReviewCardHeadingProps) => {
   const authorInitials = author.replace("@", "").charAt(0);
 
-  console.log(authorInitials);
-
   return (
     <div className="flex items-center gap-[10px]">
       {image ? (

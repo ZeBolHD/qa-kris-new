@@ -7,15 +7,15 @@ interface CompanyLogosProps {
 
 const CompanyLogos = ({ companies }: CompanyLogosProps) => {
   return (
-    <ul className="w-full mt-[50px] flex justify-between">
+    <ul className="w-full mt-[50px] h-fit items-center flex justify-between">
       {companies.map((company) => (
-        <li key={company.name}>
+        <li key={company.name} className="w-fit">
           <Image
             src={company.logo}
-            width={100}
-            height={100}
+            width={150}
+            height={50}
             alt=""
-            className="w-fit h-[34px] object-contain"
+            className="w-[150px] object-cover"
           />
         </li>
       ))}

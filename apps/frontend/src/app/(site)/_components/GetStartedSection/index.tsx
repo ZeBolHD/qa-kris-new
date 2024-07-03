@@ -8,10 +8,8 @@ const GetStartedSection = () => {
         <BackgroundPatterns />
         <div className="flex flex-col gap-[18px] justify-center items-center">
           <h2 className="text-[42px] font-bold text-center">Готовы начать учиться?</h2>
-          <p className="text-[20px] font-light text-center">
-            15 минут консультации проводятся бесплатно
-          </p>
-          <ConsultationButton text="Написать в Telegram" />
+          <p className="text-[20px] font-light text-center">Ознакомительный созвон - бесплатно</p>
+          <ConsultationButton text="Написать в Telegram" className="text-white" />
         </div>
       </div>
     </section>

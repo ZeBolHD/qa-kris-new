@@ -7,13 +7,13 @@ const AboutSectionDescription = () => {
     <div className="w-[460px] z-50">
       <div>
         <h2 className="text-[42px] font-bold">Об авторе курса</h2>
-        <p className="text-[25px] mt-[16px] font-medium">Кристина петрова, Senior QA Manual</p>
+        <p className="text-[25px] mt-[16px] font-medium">Крис, Ведущий тестер в крупном РФ банке</p>
       </div>
       <div className="mt-[16px]">
         <AboutAchievementsList achievements={achievements} />
       </div>
       <div className="mt-16">
-        <ConsultationButton text="Написать в Telegram" />
+        <ConsultationButton text="Написать в Telegram" className="text-white" />
       </div>
     </div>
   );
