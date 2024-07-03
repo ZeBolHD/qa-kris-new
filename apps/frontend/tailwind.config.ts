@@ -28,6 +28,15 @@ const config: Config = {
         lg: "16px",
         xl: "25px",
       },
+      keyframes: {
+        "rise-up": {
+          "0%": { transform: "translateY(15px); opacity: 0" },
+          "100%": { transform: "translateY(0); opacity: 1" },
+        },
+      },
+      animation: {
+        "rise-up": "rise-up 0.2s ease-in-out",
+      },
     },
   },
   plugins: [],
