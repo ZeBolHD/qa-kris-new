@@ -15,7 +15,7 @@ const CompanyLogos = ({ companies }: CompanyLogosProps) => {
             width={150}
             height={50}
             alt=""
-            className="w-[150px] object-cover"
+            className="w-[150px] h-full object-cover"
           />
         </li>
       ))}

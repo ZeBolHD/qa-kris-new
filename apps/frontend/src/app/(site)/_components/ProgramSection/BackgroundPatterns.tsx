@@ -19,7 +19,7 @@ const BackgroundPatterns = () => {
       />
       <Image
         src="/program/pattern-1.svg"
-        width={800}
+        width={700}
         height={230}
         alt="pattern"
         className="w-[700px] h-[230px] absolute z-0 right-0 top-1/2 -translate-y-1/2 -rotate-45"

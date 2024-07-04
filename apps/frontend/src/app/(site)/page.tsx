@@ -7,12 +7,15 @@ import ProgramSection from "./_components/ProgramSection";
 import FAQSection from "./_components/FAQSection";
 import PricingSection from "./_components/PricingSection";
 import GetStartedSection from "./_components/GetStartedSection";
+import ReviewsSection from "./_components/ReviewsSection";
+import { reviews } from "./_components/ReviewsSection/types";
 
 export default function HomePage() {
   return (
     <>
       <BackgroundGradient />
       <HeroSection />
+      <ReviewsSection reviews={reviews} />
       <AdvantagesSection />
       <ProgramSection />
       <CompaniesSection />

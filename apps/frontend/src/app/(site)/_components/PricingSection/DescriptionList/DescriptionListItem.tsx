@@ -4,7 +4,13 @@ import { Description } from "../types";
 const DescriptionListItem = ({ text }: Description) => {
   return (
     <li className="flex gap-[8px]">
-      <Image src="/pricing/check.svg" width={20} height={20} alt={text} />
+      <Image
+        src="/pricing/check.svg"
+        width={20}
+        height={20}
+        alt={text}
+        className="w-[20px] h-[20px]"
+      />
       <p className="text-[16px] font-light opacity-50">{text}</p>
     </li>
   );

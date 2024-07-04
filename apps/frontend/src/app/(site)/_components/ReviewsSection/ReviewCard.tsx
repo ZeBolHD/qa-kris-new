@@ -4,8 +4,8 @@ import { useRef } from "react";
 
 import { useTruncatedElement } from "@/hooks/useTruncatedElement";
 import Modal from "@/app/_components/Modal";
-import { Review } from "./types";
 import ReviewCardHeading from "./ReviewCardHeading";
+import { Review } from "./types";
 
 const ReviewCard = ({ text, author, image, position }: Review) => {
   const ref = useRef<HTMLParagraphElement>(null);
