@@ -7,7 +7,7 @@ const AboutSection = () => {
     <section id="about" className="py-[120px] bg-primary-bg">
       <div className="container flex justify-between items-center relative">
         <BackgroundPatterns />
-        <AboutPhoto image="/about/avatar-female.png" />
+        <AboutPhoto image="/about/avatar.png" />
         <AboutSectionDescription />
       </div>
     </section>

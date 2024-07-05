@@ -22,7 +22,7 @@ const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemP
 
   return (
     <li
-      className="w-full p-[24px] rounded-lg bg-white shadow-lg cursor-pointer"
+      className=" p-[24px] rounded-lg bg-white shadow-lg cursor-pointer w-full"
       onClick={handleOpen}
     >
       <dt className="w-full h-fit flex items-center gap-[10px] justify-between">

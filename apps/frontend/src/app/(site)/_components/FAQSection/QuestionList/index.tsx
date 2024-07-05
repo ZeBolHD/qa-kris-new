@@ -21,7 +21,7 @@ const QuestionList = ({ questions }: QuestionListProps) => {
 
   return (
     <dl>
-      <ul className="w-full flex flex-col gap-[16px]">
+      <ul className="w-full grid grid-cols-2 gap-y-[16px] gap-x-[46px]">
         {questions.map((question, index) => (
           <QuestionListItem
             key={question.title}

@@ -30,7 +30,7 @@ const Header = () => {
       className={cn(
         "mt-[48px] py-[5px] px-[10px]  text-white z-[999]",
         "transition-all duration-200",
-        isSticky ? "bg-white sticky top-0 text-black bg-opacity-40 w-full" : "bg-transparent",
+        isSticky ? "bg-white sticky top-0 text-black bg-opacity-80 w-full" : "bg-transparent",
       )}
     >
       <div className="container flex justify-between items-center">
