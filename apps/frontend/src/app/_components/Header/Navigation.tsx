@@ -18,7 +18,6 @@ const Navigation = () => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && entry.target.id) {
-          console.log(entry.target.id);
           setActiveSection(entry.target.id);
         }
       });
@@ -34,7 +33,7 @@ const Navigation = () => {
       <ul className="flex gap-[24px] h-full text-[20px] font-semibold">
         <li>
           <a
-            href="#main"
+            href="#"
             className={cn(
               activeSection === "hero" && "text-primary-pink",
               "hover:text-primary-pink transition duration-200",
