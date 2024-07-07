@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { cn } from "../lib/util";
-import Header from "./_components/Header";
-import Footer from "./_components/Footer";
+
+import { cn } from "@lib/util";
+import { Footer, Header } from "./_components";
 
 export const metadata: Metadata = {
   title: "KrisQA",

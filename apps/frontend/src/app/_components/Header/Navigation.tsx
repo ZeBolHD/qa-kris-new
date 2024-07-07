@@ -3,7 +3,7 @@
 import { cn } from "@/lib/util";
 import { useEffect, useState } from "react";
 
-const Navigation = () => {
+export const Navigation = () => {
   const [activeSection, setActiveSection] = useState<string>("");
 
   useEffect(() => {

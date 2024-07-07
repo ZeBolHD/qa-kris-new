@@ -10,7 +10,7 @@ interface QuestionListItemProps extends Question {
   handleOpen: () => void;
 }
 
-const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemProps) => {
+export const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemProps) => {
   const answerRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -51,5 +51,3 @@ const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemP
     </li>
   );
 };
-
-export default QuestionListItem;
