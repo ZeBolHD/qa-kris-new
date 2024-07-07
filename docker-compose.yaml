@@ -8,3 +8,34 @@ services:
       - "3600:3000"
     env_file:
       - .env
+
+  backend-new:
+    container_name: backend-new
+    build:
+      context: .
+      dockerfile: "./apps/backend/Dockerfile"
+    ports:
+      - "1337:1337"
+    volumes:
+      - strapi_uploads:/app/public/uploads
+    env_file:
+      - .env
+    depends_on:
+      - postgres
+
+  postgres:
+    container_name: postgres-strapi
+    image: postgres:14
+    ports:
+      - "5436:5432"
+    volumes:
+      - strapi_data:/var/lib/postgresql/data
+    env_file:
+      - .env
+
+volumes:
+  strapi_data:
+    external: true
+
+  strapi_uploads:
+    external: true
