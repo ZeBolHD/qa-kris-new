@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_pricing_sections",
+  "info": {
+    "displayName": "PricingSection",
+    "icon": "priceTag"
+  },
+  "options": {},
+  "attributes": {
+    "services": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service.service"
+    }
+  }
+}

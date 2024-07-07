@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ui_achievements",
+  "info": {
+    "displayName": "Achievement",
+    "icon": "magic"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

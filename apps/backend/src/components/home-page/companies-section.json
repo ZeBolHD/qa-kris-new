@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_home_page_companies_sections",
+  "info": {
+    "displayName": "CompaniesSection",
+    "icon": "briefcase"
+  },
+  "options": {},
+  "attributes": {
+    "companies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::company.company"
+    }
+  }
+}

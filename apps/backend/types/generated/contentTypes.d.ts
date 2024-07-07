@@ -485,6 +485,45 @@ export interface PluginContentReleasesReleaseAction extends Schema.CollectionTyp
   };
 }
 
+export interface PluginI18NLocale extends Schema.CollectionType {
+  collectionName: "i18n_locale";
+  info: {
+    singularName: "locale";
+    pluralName: "locales";
+    collectionName: "locales";
+    displayName: "Locale";
+    description: "";
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  pluginOptions: {
+    "content-manager": {
+      visible: false;
+    };
+    "content-type-builder": {
+      visible: false;
+    };
+  };
+  attributes: {
+    name: Attribute.String &
+      Attribute.SetMinMax<
+        {
+          min: 1;
+          max: 50;
+        },
+        number
+      >;
+    code: Attribute.String & Attribute.Unique;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"plugin::i18n.locale", "oneToOne", "admin::user"> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<"plugin::i18n.locale", "oneToOne", "admin::user"> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUsersPermissionsPermission extends Schema.CollectionType {
   collectionName: "up_permissions";
   info: {
@@ -619,41 +658,154 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface PluginI18NLocale extends Schema.CollectionType {
-  collectionName: "i18n_locale";
+export interface ApiCompanyCompany extends Schema.CollectionType {
+  collectionName: "companies";
   info: {
-    singularName: "locale";
-    pluralName: "locales";
-    collectionName: "locales";
-    displayName: "Locale";
+    singularName: "company";
+    pluralName: "companies";
+    displayName: "Company";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    name: Attribute.String;
+    logo: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::company.company", "oneToOne", "admin::user"> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<"api::company.company", "oneToOne", "admin::user"> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiFaqFaq extends Schema.CollectionType {
+  collectionName: "faqs";
+  info: {
+    singularName: "faq";
+    pluralName: "faqs";
+    displayName: "FAQ";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    question: Attribute.String;
+    answer: Attribute.Text;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::faq.faq", "oneToOne", "admin::user"> & Attribute.Private;
+    updatedBy: Attribute.Relation<"api::faq.faq", "oneToOne", "admin::user"> & Attribute.Private;
+  };
+}
+
+export interface ApiHomePageHomePage extends Schema.SingleType {
+  collectionName: "home_pages";
+  info: {
+    singularName: "home-page";
+    pluralName: "home-pages";
+    displayName: "HomePage";
     description: "";
   };
   options: {
-    draftAndPublish: false;
-  };
-  pluginOptions: {
-    "content-manager": {
-      visible: false;
-    };
-    "content-type-builder": {
-      visible: false;
-    };
+    draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String &
-      Attribute.SetMinMax<
-        {
-          min: 1;
-          max: 50;
-        },
-        number
-      >;
-    code: Attribute.String & Attribute.Unique;
+    hero_section: Attribute.Component<"home-page.hero-section">;
+    program_section: Attribute.Component<"home-page.program-section">;
+    companies_section: Attribute.Component<"home-page.companies-section">;
+    about_section: Attribute.Component<"home-page.about-section">;
+    faq_section: Attribute.Component<"home-page.faq-section">;
+    pricing_section: Attribute.Component<"home-page.pricing-section">;
+    consultation_link: Attribute.String;
+    reviews_section: Attribute.Component<"home-page.reviews-section">;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<"plugin::i18n.locale", "oneToOne", "admin::user"> &
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::home-page.home-page", "oneToOne", "admin::user"> &
       Attribute.Private;
-    updatedBy: Attribute.Relation<"plugin::i18n.locale", "oneToOne", "admin::user"> &
+    updatedBy: Attribute.Relation<"api::home-page.home-page", "oneToOne", "admin::user"> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiProgramProgram extends Schema.CollectionType {
+  collectionName: "programs";
+  info: {
+    singularName: "program";
+    pluralName: "programs";
+    displayName: "Program";
+    description: "";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    description: Attribute.Text;
+    time: Attribute.String;
+    finished: Attribute.Boolean;
+    image: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::program.program", "oneToOne", "admin::user"> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<"api::program.program", "oneToOne", "admin::user"> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiReviewReview extends Schema.CollectionType {
+  collectionName: "reviews";
+  info: {
+    singularName: "review";
+    pluralName: "reviews";
+    displayName: "Review";
+    description: "";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    author: Attribute.String;
+    text: Attribute.Text;
+    avatar: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::review.review", "oneToOne", "admin::user"> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<"api::review.review", "oneToOne", "admin::user"> &
+      Attribute.Private;
+  };
+}
+
+export interface ApiServiceService extends Schema.CollectionType {
+  collectionName: "services";
+  info: {
+    singularName: "service";
+    pluralName: "services";
+    displayName: "Service";
+    description: "";
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title: Attribute.String;
+    price: Attribute.String;
+    postpay: Attribute.String;
+    link: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<"api::service.service", "oneToOne", "admin::user"> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<"api::service.service", "oneToOne", "admin::user"> &
       Attribute.Private;
   };
 }
@@ -672,10 +824,16 @@ declare module "@strapi/types" {
       "plugin::upload.folder": PluginUploadFolder;
       "plugin::content-releases.release": PluginContentReleasesRelease;
       "plugin::content-releases.release-action": PluginContentReleasesReleaseAction;
+      "plugin::i18n.locale": PluginI18NLocale;
       "plugin::users-permissions.permission": PluginUsersPermissionsPermission;
       "plugin::users-permissions.role": PluginUsersPermissionsRole;
       "plugin::users-permissions.user": PluginUsersPermissionsUser;
-      "plugin::i18n.locale": PluginI18NLocale;
+      "api::company.company": ApiCompanyCompany;
+      "api::faq.faq": ApiFaqFaq;
+      "api::home-page.home-page": ApiHomePageHomePage;
+      "api::program.program": ApiProgramProgram;
+      "api::review.review": ApiReviewReview;
+      "api::service.service": ApiServiceService;
     }
   }
 }

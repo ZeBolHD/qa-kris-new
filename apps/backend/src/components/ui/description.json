@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_ui_descriptions",
+  "info": {
+    "displayName": "Description",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_page_reviews_sections",
+  "info": {
+    "displayName": "ReviewsSection",
+    "icon": "user",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "reviews": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::review.review"
+    },
+    "link": {
+      "type": "string"
+    }
+  }
+}

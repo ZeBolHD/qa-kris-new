@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_page_hero_sections",
+  "info": {
+    "displayName": "HeroSection",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "uptitle": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
