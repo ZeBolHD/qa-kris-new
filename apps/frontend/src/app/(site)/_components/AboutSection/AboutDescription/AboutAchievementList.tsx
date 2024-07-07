@@ -1,5 +1,5 @@
 import AboutAchievementsListItem from "./AboutAchievementListItem";
-import { Achievement } from "./types";
+import { Achievement } from "../types";
 
 interface AboutAchievementsListProps {
   achievements: Achievement[];
