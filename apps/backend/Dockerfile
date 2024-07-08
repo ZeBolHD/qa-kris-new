@@ -11,6 +11,8 @@ ENV NODE_ENV=${NODE_ENV}
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 
+RUN npm install -g node-gyp
+
 RUN npm install -g pnpm --force
 RUN pnpm install -g turbo
 RUN corepack enable
