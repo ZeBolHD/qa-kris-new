@@ -16,7 +16,7 @@ RUN apk add --no-cache \
 # Updating apk
 RUN apk update
 
-RUN python3 -m pip install setuptools
+RUN pip3 install setuptools
 
 # Set working directory
 WORKDIR /app
