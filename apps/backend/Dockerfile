@@ -1,4 +1,4 @@
-FROM node:18
+FROM node:18-alpine
 # Installing libvips-dev for sharp Compatibility
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache build-base gcc autoconf automake zlib-dev libpng-dev vips-dev libc6-compat
@@ -13,13 +13,11 @@ ENV PATH="$PNPM_HOME:$PATH"
 
 RUN npm install -g pnpm --force
 RUN pnpm install -g turbo
-RUN pnpm install -g node-gyp
-
 RUN corepack enable
 COPY . .
 RUN pnpm turbo prune --scope=backend --docker
 
-RUN pnpm install --prod
+RUN pnpm install
 
 RUN pnpm run build --filter=backend
 
