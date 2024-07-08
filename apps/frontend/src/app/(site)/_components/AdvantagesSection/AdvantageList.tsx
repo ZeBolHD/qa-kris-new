@@ -1,5 +1,6 @@
+import { Advantage } from "@/types";
+
 import { AdvantageListItem } from "./AdvantageListItem";
-import { Advantage } from "./types";
 
 interface AdvantageListProps {
   advantages: Advantage[];

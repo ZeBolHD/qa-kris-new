@@ -1,26 +1,24 @@
 import { ConsultationButton } from "@/app/_components";
+import { HomePageReviewsSectionDto } from "@lib/api/homePage/reviews";
 
-import { Review } from "./types";
 import { ReviewCard } from "./ReviewCard";
 
-interface ReviewsProps {
-  reviews: Review[];
-}
+interface ReviewsProps extends HomePageReviewsSectionDto {}
 
-export const ReviewsSection = ({ reviews }: ReviewsProps) => (
-  <section className="w-full container" id="reviews">
-    <ul className="w-full py-[50px]">
+export const ReviewsSection = ({ reviews, reviews_link }: ReviewsProps) => (
+  <section className="w-full container py-[50px]" id="reviews">
+    <ul className="w-full ">
       <div className="flex w-full justify-between gap-[30px]">
-        {reviews.slice(0, 3).map((review) => (
+        {reviews!.slice(0, 3).map((review) => (
           <ReviewCard key={review.author} {...review} />
         ))}
       </div>
     </ul>
     <div className="text-center">
       <ConsultationButton
-        href="https://www.it-mentors.ru/reviews?id=6173610790"
+        href={reviews_link || "/"}
         text="Посмотреть все отзывы"
-        className="text-white"
+        className="text-white mt-[50px]"
       />
     </div>
   </section>

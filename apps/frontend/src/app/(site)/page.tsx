@@ -10,24 +10,31 @@ import {
   ReviewsSection,
   GetStartedSection,
 } from "./_components";
-import { reviews } from "./_components/ReviewsSection/types";
-import { homePageApiClient } from "@/lib/api";
+
+import { apiClient } from "@/lib/api";
 
 export default async function HomePage() {
-  const { data: hero } = await homePageApiClient.getHeroSection();
+  const { data: heroSection } = await apiClient.getHeroSection();
+  const { data: reviewsSection } = await apiClient.getReviewsSection();
+  const { data: advantagesSection } = await apiClient.getAdvantagesSection();
+  const { data: programSection } = await apiClient.getProgramSection();
+  const { data: aboutSection } = await apiClient.getAboutSection();
+  const { data: faqSection } = await apiClient.getFAQSection();
+  const { data: pricingSection } = await apiClient.getPricingSection();
+  const { data: companiesSection } = await apiClient.getCompaniesSection();
 
   return (
     <>
       <BackgroundGradient />
-      <HeroSection {...hero} />
-      <ReviewsSection reviews={reviews} />
-      <AdvantagesSection />
-      <ProgramSection />
-      <CompaniesSection />
-      <AboutSection />
-      <FAQSection />
-      <PricingSection />
-      <GetStartedSection />
+      <HeroSection {...heroSection} />
+      <ReviewsSection {...reviewsSection} />
+      <AdvantagesSection {...advantagesSection} />
+      <ProgramSection {...programSection} />
+      <CompaniesSection {...companiesSection} />
+      <AboutSection {...aboutSection} />
+      <FAQSection {...faqSection} />
+      <PricingSection {...pricingSection} />
+      <GetStartedSection consultationLink={heroSection.link!} />
     </>
   );
 }

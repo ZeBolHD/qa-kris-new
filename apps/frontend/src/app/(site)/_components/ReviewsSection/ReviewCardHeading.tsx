@@ -1,17 +1,15 @@
+import { Review } from "@/types";
+
 import { ReviewCardAvatar } from "./ReviewCardAvatar";
 
-interface ReviewCardHeadingProps {
-  author: string;
-  position: string;
-  image?: string;
-}
+interface ReviewCardHeadingProps extends Omit<Review, "text"> {}
 
-export const ReviewCardHeading = ({ author, image, position }: ReviewCardHeadingProps) => (
+export const ReviewCardHeading = ({ author, avatar, position }: ReviewCardHeadingProps) => (
   <div className="flex items-center gap-[10px]">
-    <ReviewCardAvatar {...{ url: image, author }} />
+    <ReviewCardAvatar initials={author!.replace("@", "").charAt(0)} image={avatar} />
     <div>
       <h4 className="font-bold">{author}</h4>
-      <p className="text-[14px] opacity-40">{position}</p>
+      <p className="text-[14px] opacity-50">{position}</p>
     </div>
   </div>
 );

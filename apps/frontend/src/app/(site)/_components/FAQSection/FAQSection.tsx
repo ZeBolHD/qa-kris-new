@@ -1,18 +1,19 @@
 import { SectionHeading } from "@/app/_components";
 import { BackgroundPatterns } from "./BackgroundPatterns";
-import { QuestionList } from "./QuestionList/QuestionList";
-import { questions } from "./types";
+import { FAQList } from "./FAQList/FAQList";
 
-export const FAQSection = () => (
+import { HomePageFAQSectionDto } from "@/lib/api/homePage";
+
+interface FAQSectionProps extends HomePageFAQSectionDto {}
+
+export const FAQSection = ({ faqs }: FAQSectionProps) => (
   <section id="faq" className="py-[140px]">
     <div className="container w-full relative">
       <BackgroundPatterns />
       <div className="z-50">
-        <SectionHeading text="Часто задаваемые вопросы" />
+        <SectionHeading text="Часто задаваемые вопросы" centered />
       </div>
-      <div className="w-full mt-[60px]">
-        <QuestionList questions={questions} />
-      </div>
+      <div className="w-full mt-[60px]">{faqs && <FAQList faqs={faqs} />}</div>
     </div>
   </section>
 );

@@ -1,15 +1,16 @@
+import { ImageApi } from "@/types";
 import Image from "next/image";
 
 interface ReviewCardAvatarProps {
-  url?: string;
-  author: string;
+  image?: ImageApi | null | undefined;
+  initials: string;
 }
 
-export const ReviewCardAvatar = ({ url, author }: ReviewCardAvatarProps) => {
-  if (url) {
+export const ReviewCardAvatar = ({ image, initials }: ReviewCardAvatarProps) => {
+  if (image?.url) {
     return (
       <Image
-        src={url}
+        src={image?.url}
         alt="avatar"
         width={45}
         height={45}
@@ -20,7 +21,7 @@ export const ReviewCardAvatar = ({ url, author }: ReviewCardAvatarProps) => {
 
   return (
     <div className="w-[45px] h-[45px] flex justify-center items-center border-[1px] bg-white rounded-sm">
-      <span className="text-black uppercase">{author.replace("@", "").charAt(0)}</span>
+      <span className="text-black uppercase">{initials}</span>
     </div>
   );
 };

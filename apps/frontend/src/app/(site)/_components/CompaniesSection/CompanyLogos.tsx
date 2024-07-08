@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Company } from "./types";
+import { Company } from "@/types";
 
 interface CompanyLogosProps {
   companies: Company[];
@@ -10,7 +10,7 @@ export const CompanyLogos = ({ companies }: CompanyLogosProps) => (
     {companies.map((company) => (
       <li key={company.name} className="w-fit">
         <Image
-          src={company.logo}
+          src={company.logo?.url || ""}
           width={150}
           height={50}
           alt=""

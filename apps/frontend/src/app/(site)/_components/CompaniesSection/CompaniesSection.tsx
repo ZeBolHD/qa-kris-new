@@ -1,17 +1,18 @@
 import { SectionHeading } from "@/app/_components";
 
-import { BackgroundPatterns } from "./BackgroundPatterns";
+import { HomePageCompaniesSectionDto } from "@/lib/api/homePagecompanies";
 
+import { BackgroundPatterns } from "./BackgroundPatterns";
 import { CompanyLogos } from "./CompanyLogos";
 
-import { companies } from "./types";
+interface CompaniesSectionProps extends HomePageCompaniesSectionDto {}
 
-export const CompaniesSection = () => (
+export const CompaniesSection = ({ companies }: CompaniesSectionProps) => (
   <section className="p-[100px]">
     <div className="container text-center relative">
       <BackgroundPatterns />
-      <SectionHeading text="Компании, в которые устраиваются ученики" />
-      <CompanyLogos companies={companies} />
+      <SectionHeading text="Компании, в которые устраиваются ученики" centered />
+      {companies && <CompanyLogos companies={companies} />}
     </div>
   </section>
 );

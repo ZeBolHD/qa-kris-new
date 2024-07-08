@@ -1,4 +1,4 @@
-import { Description } from "../../types";
+import { Description } from "@/types";
 import { DescriptionListItem } from "./DescriptionListItem";
 
 interface DescriptionListProps {

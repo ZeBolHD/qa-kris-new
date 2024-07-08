@@ -1,13 +1,14 @@
-import { ReviewCardHeading } from "./ReviewCardHeading";
-import { Review } from "./types";
+import { Review } from "@/types";
 
-export const ReviewCard = ({ text, author, image, position }: Review) => (
+import { ReviewCardHeading } from "./ReviewCardHeading";
+
+export const ReviewCard = ({ text, author, avatar, position }: Review) => (
   <li
     className={
       "flex flex-col justify-between gap-[10px] w-[340px] text-left text-black bg-white rounded-md p-[24px] hover:shadow-xl transition-all duration-300"
     }
   >
-    <ReviewCardHeading author={author} image={image} position={position} />
+    <ReviewCardHeading author={author} avatar={avatar} position={position} />
     <div className="flex-1">
       <p className="line-clamp-[12] whitespace-pre-line font-light">{text}</p>
     </div>

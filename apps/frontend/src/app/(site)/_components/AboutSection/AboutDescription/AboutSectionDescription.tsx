@@ -2,22 +2,20 @@ import { ConsultationButton } from "@/app/_components/ConsultationButton";
 
 import { AboutAchievementsList } from "./AboutAchievementList";
 
-import { achievements } from "../types";
 import { SectionHeading } from "@/app/_components";
+import { HomePageAboutSectionDto } from "@/lib/api/homePage";
 
-export const AboutSectionDescription = () => (
-  <div className="w-[460px] z-50">
+interface AboutSectionDescriptionProps
+  extends Pick<HomePageAboutSectionDto, "title" | "achievements"> {}
+
+export const AboutSectionDescription = ({ title, achievements }: AboutSectionDescriptionProps) => (
+  <div className="w-[460px] z-50 flex flex-col gap-[16px]">
     <div>
       <SectionHeading text="Об авторе курса" />
-      <p className="text-[25px] mt-[16px] font-medium">
-        Кристина: Senior Manual QA в крупном РФ банке
-      </p>
+      <p className="text-[25px] font-medium">{title}</p>
     </div>
-    <div className="mt-[16px]">
-      <AboutAchievementsList achievements={achievements} />
-    </div>
-    <div className="mt-16">
-      <ConsultationButton text="Написать в Telegram" className="text-white" />
-    </div>
+    {achievements && <AboutAchievementsList achievements={achievements} />}
+
+    <ConsultationButton text="Написать в Telegram" className="text-white" />
   </div>
 );

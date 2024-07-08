@@ -1,5 +1,5 @@
 import { PricingListItem } from "./PricingListItem";
-import { Service } from "../types";
+import { Service } from "@/types";
 
 interface PricingListProps {
   services: Service[];

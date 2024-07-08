@@ -1,16 +1,17 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Question } from "../types";
+
 import Image from "next/image";
 import { cn } from "@/lib/util";
+import { FAQ } from "@/types";
 
-interface QuestionListItemProps extends Question {
+interface FAQListItemProps extends FAQ {
   isOpen: boolean;
   handleOpen: () => void;
 }
 
-export const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionListItemProps) => {
+export const FAQListItem = ({ question, answer, isOpen, handleOpen }: FAQListItemProps) => {
   const answerRef = useRef<HTMLDivElement>(null);
   const [contentHeight, setContentHeight] = useState(0);
 
@@ -22,11 +23,11 @@ export const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionLi
 
   return (
     <li
-      className=" p-[24px] rounded-lg bg-white shadow-lg cursor-pointer w-full"
+      className="p-[24px] rounded-lg bg-white shadow-lg cursor-pointer w-full h-full mt-[25px] break-inside-avoid-column"
       onClick={handleOpen}
     >
-      <dt className="w-full h-fit flex items-center gap-[10px] justify-between">
-        <h4 className="text-[20px] font-semibold">{title}</h4>
+      <dt className="w-full flex items-center gap-[10px] justify-between h-fit">
+        <h4 className="text-[20px] font-semibold">{question}</h4>
         <Image
           src="/faq/arrow.svg"
           width={24}
@@ -44,7 +45,7 @@ export const QuestionListItem = ({ title, text, isOpen, handleOpen }: QuestionLi
       >
         <div ref={answerRef}>
           <dd>
-            <p className="text-[16px] font-light opacity-40 leading-snug">{text}</p>
+            <p className="text-[16px] font-light opacity-50 leading-snug">{answer}</p>
           </dd>
         </div>
       </div>

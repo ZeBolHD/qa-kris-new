@@ -1,13 +1,15 @@
 import Image from "next/image";
 
+import { ImageApi } from "@/types";
+
 interface AboutPhotoProps {
-  image: string;
+  avatar: ImageApi;
 }
 
-export const AboutPhoto = ({ image }: AboutPhotoProps) => (
+export const AboutPhoto = ({ avatar }: AboutPhotoProps) => (
   <div className="w-[500px] z-50">
     <Image
-      src={image}
+      src={avatar?.url || "/avatar.png"}
       alt=""
       width={500}
       height={500}

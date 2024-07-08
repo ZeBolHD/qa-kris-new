@@ -1,4 +1,4 @@
-import { Program } from "../types";
+import { Program } from "@/types";
 import { ProgramTableColumnHeading } from "./ProgramTableColumnHeading";
 import { ProgramTableRow } from "./ProgramTableRow";
 
