@@ -12,7 +12,6 @@ RUN npm install -g pnpm --force
 RUN pnpm install -g turbo
 COPY ./package.json ./pnpm-lock.yaml ./
 RUN corepack enable
-RUN pnpm install
 
 COPY . .
 
@@ -20,4 +19,6 @@ RUN pnpm turbo prune --scope=frontend --docker
 
 RUN pnpm install
 
-CMD pnpm turbo run build --filter=frontend && cd apps/frontend && pnpm start
+RUN pnpm run build --filter=frontend
+
+CMD cd apps/frontend && pnpm start
