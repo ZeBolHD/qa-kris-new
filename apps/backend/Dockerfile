@@ -12,12 +12,10 @@ RUN apk add --no-cache \
   libc6-compat \
   python3 \
   python3-dev \
-  py3-pip
+  py3-setuptools
 
 # Updating apk
 RUN apk update
-
-RUN pip3 install setuptools
 
 # Set working directory
 WORKDIR /app
