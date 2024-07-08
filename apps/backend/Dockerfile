@@ -11,7 +11,7 @@ ENV NODE_ENV=${NODE_ENV}
 RUN npm install turbo --global
 RUN corepack enable
 COPY . .
-RUN npm turbo prune --scope=backend --docker
+RUN turbo prune --scope=backend --docker
 
 RUN npm install
 
