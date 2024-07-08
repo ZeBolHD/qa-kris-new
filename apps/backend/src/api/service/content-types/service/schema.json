@@ -13,16 +13,26 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "price": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "postpay": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
+    },
+    "descriptions": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.description",
+      "required": true
     }
   }
 }

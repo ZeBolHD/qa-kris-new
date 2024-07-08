@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_ui_advantages",
+  "info": {
+    "displayName": "Advantage",
+    "icon": "feather",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "text",
+      "required": true
+    },
+    "heading": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

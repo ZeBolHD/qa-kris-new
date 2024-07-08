@@ -13,7 +13,8 @@
       "target": "api::review.review"
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

@@ -664,13 +664,14 @@ export interface ApiCompanyCompany extends Schema.CollectionType {
     singularName: "company";
     pluralName: "companies";
     displayName: "Company";
+    description: "";
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    name: Attribute.String;
-    logo: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    name: Attribute.String & Attribute.Required;
+    logo: Attribute.Media<"images" | "files" | "videos" | "audios"> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -687,13 +688,14 @@ export interface ApiFaqFaq extends Schema.CollectionType {
     singularName: "faq";
     pluralName: "faqs";
     displayName: "FAQ";
+    description: "";
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
-    question: Attribute.String;
-    answer: Attribute.Text;
+    question: Attribute.String & Attribute.Required;
+    answer: Attribute.Text & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -714,14 +716,15 @@ export interface ApiHomePageHomePage extends Schema.SingleType {
     draftAndPublish: true;
   };
   attributes: {
-    hero_section: Attribute.Component<"home-page.hero-section">;
-    program_section: Attribute.Component<"home-page.program-section">;
-    companies_section: Attribute.Component<"home-page.companies-section">;
-    about_section: Attribute.Component<"home-page.about-section">;
+    hero_section: Attribute.Component<"home-page.hero-section"> & Attribute.Required;
+    program_section: Attribute.Component<"home-page.program-section"> & Attribute.Required;
+    companies_section: Attribute.Component<"home-page.companies-section"> & Attribute.Required;
+    about_section: Attribute.Component<"home-page.about-section"> & Attribute.Required;
     faq_section: Attribute.Component<"home-page.faq-section">;
     pricing_section: Attribute.Component<"home-page.pricing-section">;
-    consultation_link: Attribute.String;
+    consultation_link: Attribute.String & Attribute.Required;
     reviews_section: Attribute.Component<"home-page.reviews-section">;
+    advantages_section: Attribute.Component<"home-page.advantages-section"> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -744,10 +747,10 @@ export interface ApiProgramProgram extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    description: Attribute.Text;
-    time: Attribute.String;
-    finished: Attribute.Boolean;
+    title: Attribute.String & Attribute.Required;
+    description: Attribute.Text & Attribute.Required;
+    time: Attribute.String & Attribute.Required;
+    finished: Attribute.Boolean & Attribute.Required;
     image: Attribute.Media<"images" | "files" | "videos" | "audios">;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
@@ -771,9 +774,10 @@ export interface ApiReviewReview extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    author: Attribute.String;
-    text: Attribute.Text;
+    author: Attribute.String & Attribute.Required;
+    text: Attribute.Text & Attribute.Required;
     avatar: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    position: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -796,10 +800,11 @@ export interface ApiServiceService extends Schema.CollectionType {
     draftAndPublish: true;
   };
   attributes: {
-    title: Attribute.String;
-    price: Attribute.String;
-    postpay: Attribute.String;
-    link: Attribute.String;
+    title: Attribute.String & Attribute.Required;
+    price: Attribute.String & Attribute.Required;
+    postpay: Attribute.String & Attribute.Required;
+    link: Attribute.String & Attribute.Required;
+    descriptions: Attribute.Component<"ui.description", true> & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

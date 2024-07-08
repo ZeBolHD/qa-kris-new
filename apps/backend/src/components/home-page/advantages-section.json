@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_home_page_advantages_sections",
+  "info": {
+    "displayName": "AdvantagesSection",
+    "icon": "check"
+  },
+  "options": {},
+  "attributes": {
+    "advantages": {
+      "type": "component",
+      "repeatable": true,
+      "component": "ui.advantage",
+      "required": true
+    }
+  }
+}

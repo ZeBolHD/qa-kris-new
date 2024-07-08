@@ -16,22 +16,26 @@
       "displayName": "HeroSection",
       "type": "component",
       "repeatable": false,
-      "component": "home-page.hero-section"
+      "component": "home-page.hero-section",
+      "required": true
     },
     "program_section": {
       "type": "component",
       "repeatable": false,
-      "component": "home-page.program-section"
+      "component": "home-page.program-section",
+      "required": true
     },
     "companies_section": {
       "type": "component",
       "repeatable": false,
-      "component": "home-page.companies-section"
+      "component": "home-page.companies-section",
+      "required": true
     },
     "about_section": {
       "type": "component",
       "repeatable": false,
-      "component": "home-page.about-section"
+      "component": "home-page.about-section",
+      "required": true
     },
     "faq_section": {
       "type": "component",
@@ -44,12 +48,19 @@
       "component": "home-page.pricing-section"
     },
     "consultation_link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "reviews_section": {
       "type": "component",
       "repeatable": false,
       "component": "home-page.reviews-section"
+    },
+    "advantages_section": {
+      "type": "component",
+      "repeatable": false,
+      "component": "home-page.advantages-section",
+      "required": true
     }
   }
 }

@@ -7,13 +7,19 @@
   "options": {},
   "attributes": {
     "heading": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "uptitle": {
-      "type": "text"
+      "type": "text",
+      "required": false
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
+    },
+    "link": {
+      "type": "string"
     }
   }
 }

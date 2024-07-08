@@ -13,10 +13,12 @@
   "pluginOptions": {},
   "attributes": {
     "author": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "text": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "avatar": {
       "type": "media",
@@ -28,6 +30,10 @@
         "videos",
         "audios"
       ]
+    },
+    "position": {
+      "type": "string",
+      "required": true
     }
   }
 }

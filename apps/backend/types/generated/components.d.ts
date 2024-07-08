@@ -10,7 +10,18 @@ export interface HomePageAboutSection extends Schema.Component {
   attributes: {
     title: Attribute.String;
     achievements: Attribute.Component<"ui.achievement", true>;
-    avatar: Attribute.Media<"images" | "files" | "videos" | "audios">;
+    avatar: Attribute.Media<"images" | "files" | "videos" | "audios"> & Attribute.Required;
+  };
+}
+
+export interface HomePageAdvantagesSection extends Schema.Component {
+  collectionName: "components_home_page_advantages_sections";
+  info: {
+    displayName: "AdvantagesSection";
+    icon: "check";
+  };
+  attributes: {
+    advantages: Attribute.Component<"ui.advantage", true> & Attribute.Required;
   };
 }
 
@@ -46,9 +57,10 @@ export interface HomePageHeroSection extends Schema.Component {
     description: "";
   };
   attributes: {
-    heading: Attribute.String;
+    heading: Attribute.String & Attribute.Required;
     uptitle: Attribute.Text;
-    description: Attribute.Text;
+    description: Attribute.Text & Attribute.Required;
+    link: Attribute.String;
   };
 }
 
@@ -72,7 +84,7 @@ export interface HomePageProgramSection extends Schema.Component {
   };
   attributes: {
     programs: Attribute.Relation<"home-page.program-section", "oneToMany", "api::program.program">;
-    title: Attribute.String;
+    title: Attribute.String & Attribute.Required;
     descriptions: Attribute.Component<"ui.description", true>;
   };
 }
@@ -86,7 +98,7 @@ export interface HomePageReviewsSection extends Schema.Component {
   };
   attributes: {
     reviews: Attribute.Relation<"home-page.reviews-section", "oneToMany", "api::review.review">;
-    link: Attribute.String;
+    link: Attribute.String & Attribute.Required;
   };
 }
 
@@ -95,9 +107,23 @@ export interface UiAchievement extends Schema.Component {
   info: {
     displayName: "Achievement";
     icon: "magic";
+    description: "";
   };
   attributes: {
-    text: Attribute.String;
+    text: Attribute.String & Attribute.Required;
+  };
+}
+
+export interface UiAdvantage extends Schema.Component {
+  collectionName: "components_ui_advantages";
+  info: {
+    displayName: "Advantage";
+    icon: "feather";
+    description: "";
+  };
+  attributes: {
+    text: Attribute.Text & Attribute.Required;
+    heading: Attribute.String & Attribute.Required;
   };
 }
 
@@ -106,9 +132,10 @@ export interface UiDescription extends Schema.Component {
   info: {
     displayName: "Description";
     icon: "apps";
+    description: "";
   };
   attributes: {
-    text: Attribute.String;
+    text: Attribute.String & Attribute.Required;
   };
 }
 
@@ -116,6 +143,7 @@ declare module "@strapi/types" {
   export module Shared {
     export interface Components {
       "home-page.about-section": HomePageAboutSection;
+      "home-page.advantages-section": HomePageAdvantagesSection;
       "home-page.companies-section": HomePageCompaniesSection;
       "home-page.faq-section": HomePageFaqSection;
       "home-page.hero-section": HomePageHeroSection;
@@ -123,6 +151,7 @@ declare module "@strapi/types" {
       "home-page.program-section": HomePageProgramSection;
       "home-page.reviews-section": HomePageReviewsSection;
       "ui.achievement": UiAchievement;
+      "ui.advantage": UiAdvantage;
       "ui.description": UiDescription;
     }
   }

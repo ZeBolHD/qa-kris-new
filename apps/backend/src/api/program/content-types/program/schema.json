@@ -13,16 +13,20 @@
   "pluginOptions": {},
   "attributes": {
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "description": {
-      "type": "text"
+      "type": "text",
+      "required": true
     },
     "time": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "finished": {
-      "type": "boolean"
+      "type": "boolean",
+      "required": true
     },
     "image": {
       "type": "media",
