@@ -1,6 +1,6 @@
 import { SectionHeading } from "@/app/_components";
 
-import { HomePageCompaniesSectionDto } from "@/lib/api/homePagecompanies";
+import { HomePageCompaniesSectionDto } from "@/lib/api/homePage";
 
 import { BackgroundPatterns } from "./BackgroundPatterns";
 import { CompanyLogos } from "./CompanyLogos";

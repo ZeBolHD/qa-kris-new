@@ -1,6 +1,6 @@
 import { ConsultationButton } from "@/app/_components";
 
-import { HomePageHeroSectionDto } from "@/lib/api/homePagehero";
+import { HomePageHeroSectionDto } from "@/lib/api/homePage";
 
 import { Heading } from "./Heading";
 import { BackgroundPatterns } from "./BackgroundPatterns";
