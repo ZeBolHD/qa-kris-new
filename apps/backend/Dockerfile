@@ -15,7 +15,7 @@ RUN turbo prune --scope=backend --docker
 
 RUN npm install
 
-RUN npm run build --filter=backend
+RUN turbo build --filter=backend
 
 EXPOSE 1337
 
