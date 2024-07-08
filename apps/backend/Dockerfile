@@ -16,7 +16,7 @@ RUN apk add --no-cache \
 # Updating apk
 RUN apk update
 
-RUN pip3 install gyp
+RUN python3 -m pip install setuptools
 
 # Set working directory
 WORKDIR /app
