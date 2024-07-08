@@ -11,7 +11,8 @@ RUN apk add --no-cache \
   vips-dev \
   libc6-compat \
   python3 \
-  python3-dev
+  python3-dev \
+  py3-pip
 
 # Updating apk
 RUN apk update
