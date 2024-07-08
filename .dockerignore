@@ -1,5 +1,8 @@
 .env
 /node_modules
 /.next
+/.strapi
+/uploads
 /dist
 .turbo
+*.tar
