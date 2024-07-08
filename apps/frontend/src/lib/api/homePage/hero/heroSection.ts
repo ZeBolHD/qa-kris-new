@@ -12,6 +12,7 @@ const GET_HOME_PAGE_HERO_SECTION = gql(/* GraphQL */ `
           hero_section {
             heading
             uptitle
+            link
           }
         }
       }

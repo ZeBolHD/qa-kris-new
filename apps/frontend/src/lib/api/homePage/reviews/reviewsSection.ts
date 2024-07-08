@@ -4,7 +4,7 @@ import { query } from "../../ApolloClient";
 import { HomePageReviewsSectionDto } from "./reviews.dto";
 
 const GET_HOME_PAGE_REVIEWS_SECTION = gql(/* GraphQL */ `
-  query getHomeReviewsSection {
+  query getHomePageReviewsSection {
     homePage {
       data {
         attributes {
@@ -15,10 +15,11 @@ const GET_HOME_PAGE_REVIEWS_SECTION = gql(/* GraphQL */ `
                 attributes {
                   author
                   text
+                  position
                   avatar {
                     data {
                       attributes {
-                        name
+                        alternativeText
                         url
                       }
                     }
