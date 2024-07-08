@@ -8,19 +8,16 @@ WORKDIR /app
 ARG NODE_ENV production
 ENV NODE_ENV=${NODE_ENV}
 
-ENV PNPM_HOME="/pnpm"
-ENV PATH="$PNPM_HOME:$PATH"
+RUN npm install -g turbo
 
-RUN npm install -g pnpm --force
-RUN pnpm install -g turbo
 RUN corepack enable
 COPY . .
-RUN pnpm turbo prune --scope=backend --docker
+RUN npm turbo prune --scope=backend --docker
 
-RUN pnpm install
+RUN npm install
 
-RUN pnpm run build --filter=backend
+RUN npm run build --filter=backend
 
 EXPOSE 1337
 
-CMD cd apps/backend && pnpm run start
+CMD cd apps/backend && npm run start

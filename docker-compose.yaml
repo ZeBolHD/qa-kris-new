@@ -17,7 +17,7 @@ services:
     ports:
       - "1337:1337"
     volumes:
-      - strapi_uploads:/app/public/uploads
+      - strapi_uploads:/app/apps/backend/public/uploads
     env_file:
       - .env
     depends_on:
