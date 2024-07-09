@@ -6,7 +6,7 @@ import { HomePageHeroPricingDto } from "@/lib/api/homePage";
 interface PricingSectionProps extends HomePageHeroPricingDto {}
 
 export const PricingSection = ({ services }: PricingSectionProps) => (
-  <section className="p-[120px]" id="pricing">
+  <section className="py-[120px]" id="pricing">
     <div className="container text-center">
       <SectionHeading text="Стоимость обучения" />
     </div>

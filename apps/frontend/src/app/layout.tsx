@@ -19,10 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "w-screen overflow-x-hidden")}>
-        <Header />
-        {children}
-        <Footer />
+      <body className={inter.className}>
+        <div className="h-full max-lg:hidden w-screen overflow-x-hidden">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+        <div className="w-full h-screen flex justify-center items-center xl:hidden">
+          <p className="text-black px-[24px] text-center">
+            Чтобы посмотреть информацию перейдите в десктоп версию
+          </p>
+        </div>
       </body>
     </html>
   );
