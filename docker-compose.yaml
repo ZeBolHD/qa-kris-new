@@ -7,7 +7,7 @@ services:
     ports:
       - "3600:3000"
     env_file:
-      - .env
+      - .env.frontend
 
   backend-new:
     container_name: backend-new
@@ -19,7 +19,7 @@ services:
     volumes:
       - strapi_uploads:/app/apps/backend/public/uploads
     env_file:
-      - .env
+      - .env.backend
     depends_on:
       - postgres
 
@@ -31,7 +31,7 @@ services:
     volumes:
       - strapi_data:/var/lib/postgresql/data
     env_file:
-      - .env
+      - .env.backend
 
 volumes:
   strapi_data:
