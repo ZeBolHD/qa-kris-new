@@ -13,6 +13,7 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
+      console.log(window.scrollY);
       if (window.scrollY > 48) {
         setIsSticky(true);
       } else {
@@ -31,7 +32,7 @@ export const Header = () => {
     <header
       className={cn(
         "mt-[48px] py-[5px] px-[10px]  text-white z-[999]",
-        "transition-all duration-200",
+        "transition-all duration-200 ",
         isSticky ? "bg-white sticky top-0 text-black bg-opacity-80 w-full" : "bg-transparent",
       )}
     >
