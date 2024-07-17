@@ -14,7 +14,7 @@ export const ReviewCardAvatar = ({ image, initials }: ReviewCardAvatarProps) => 
         alt="avatar"
         width={45}
         height={45}
-        className="w-[45px] h-[45px] rounded-sm border-[1px]"
+        className="w-[45px] h-[45px] rounded-sm border-[1px] max-sm:w-[44px] max-sm:h-[44px]"
       />
     );
   }

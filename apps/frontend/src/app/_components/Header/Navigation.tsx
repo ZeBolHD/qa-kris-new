@@ -29,7 +29,7 @@ export const Navigation = () => {
   }, []);
 
   return (
-    <nav className="w-fit h-full">
+    <nav className="w-fit h-full max-sm:hidden">
       <ul className="flex gap-[24px] h-full text-[20px] font-semibold">
         <li>
           <a

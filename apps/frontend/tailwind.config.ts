@@ -15,6 +15,10 @@ const config: Config = {
         screens: {
           "2xl": "1075px",
         },
+        padding: {
+          DEFAULT: "26px",
+          "2xl": "0",
+        },
       },
       colors: {
         "primary-pink": "#E50F8D",

@@ -6,6 +6,6 @@ export const BackgroundPatterns = () => (
     width={180}
     height={100}
     alt="pattern"
-    className="w-[180px] h-[100px] absolute z-50 -right-[300px] -bottom-[150px]"
+    className="w-[180px] h-[100px] absolute z-50 -right-[300px] -bottom-[150px] max-sm:hidden"
   />
 );

@@ -31,8 +31,8 @@ export const Header = () => {
   return (
     <header
       className={cn(
-        "mt-[48px] py-[5px] px-[10px]  text-white z-[999]",
-        "transition-all duration-200 ",
+        "mt-[48px] py-[5px]  text-white z-[999]",
+        "transition-all duration-200 max-sm:mt-[20px]",
         isSticky ? "bg-white sticky top-0 text-black bg-opacity-80 w-full" : "bg-transparent",
       )}
     >

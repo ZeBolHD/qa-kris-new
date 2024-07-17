@@ -9,7 +9,7 @@ export const ReviewCardHeading = ({ author, avatar, position }: ReviewCardHeadin
     <ReviewCardAvatar initials={author!.replace("@", "").charAt(0)} image={avatar} />
     <div>
       <h4 className="font-bold">{author}</h4>
-      <p className="text-[14px] opacity-50">{position}</p>
+      <p className="text-[14px] opacity-50 max-sm:text-[12px]">{position}</p>
     </div>
   </div>
 );

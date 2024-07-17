@@ -8,10 +8,13 @@ import { CompanyLogos } from "./CompanyLogos";
 interface CompaniesSectionProps extends HomePageCompaniesSectionDto {}
 
 export const CompaniesSection = ({ companies }: CompaniesSectionProps) => (
-  <section className="p-[100px]">
+  <section className="py-[100px] max-sm:py-[50px]">
     <div className="container text-center relative">
       <BackgroundPatterns />
-      <SectionHeading text="Компании, в которые устраиваются ученики" centered />
+      <SectionHeading
+        text="Компании, в которые устраиваются ученики"
+        className="text-center max-sm:text-left"
+      />
       {companies && <CompanyLogos companies={companies} />}
     </div>
   </section>

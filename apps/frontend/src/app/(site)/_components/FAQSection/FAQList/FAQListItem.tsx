@@ -23,7 +23,8 @@ export const FAQListItem = ({ question, answer, isOpen, handleOpen }: FAQListIte
 
   return (
     <li
-      className="p-[24px] rounded-lg bg-white shadow-lg cursor-pointer w-full h-full mt-[25px] break-inside-avoid-column"
+      className="p-[24px] rounded-lg mt-[25px] first:mt-0 bg-white shadow-lg cursor-pointer w-full h-full break-inside-avoid-column
+      max-sm:py-[12px] max-sm:px-[16px] max-sm:mt-[12px]"
       onClick={handleOpen}
     >
       <dt className="w-full flex items-center gap-[10px] justify-between h-fit">
@@ -45,7 +46,9 @@ export const FAQListItem = ({ question, answer, isOpen, handleOpen }: FAQListIte
       >
         <div ref={answerRef}>
           <dd>
-            <p className="text-[16px] font-light opacity-50 leading-snug">{answer}</p>
+            <p className="text-[16px] font-light opacity-50 leading-snug max-sm:text-[14px]">
+              {answer}
+            </p>
           </dd>
         </div>
       </div>

@@ -4,12 +4,12 @@ import { Service } from "@/types";
 export const PricingListItem = ({ title, price, postpay, descriptions }: Service) => (
   <li
     className="w-[400px] flex flex-col p-[32px] leading-tight group hover:scale-110 transition-all duration-200 relative
-hover:shadow-lg"
+    hover:shadow-lg max-sm:w-full max-sm:shadow-lg max-sm:hover:scale-100"
   >
     <div className="flex-1">
       <div className="w-full">
-        <div className="flex justify-between w-full items-end">
-          <p className="text-[46px] font-bold">{price}</p>
+        <div className="flex justify-between w-full items-end max-sm:justify-normal">
+          <p className="text-[46px] font-bold max-sm:text-[30px]">{price}</p>
           <p className="text-[14px] font-light opacity-50 justify-end">
             {postpay ? postpay : "без постоплаты"}
           </p>

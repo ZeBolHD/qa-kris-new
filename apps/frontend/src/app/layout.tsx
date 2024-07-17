@@ -19,17 +19,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={cn(inter.className, "overflow-x-hidden")}>
-        <div className="max-lg:hidden w-screen">
-          <Header />
-          {children}
-          <Footer />
-        </div>
-        <div className="w-full h-screen flex justify-center items-center xl:hidden">
+      <body className={cn(inter.className, "")}>
+        <Header />
+        <div className="overflow-x-hidden min-h-screen">{children}</div>
+        <Footer />
+        {/* <div className="w-full h-screen flex justify-center items-center xl:hidden">
           <p className="text-black px-[24px] text-center">
             Чтобы посмотреть информацию перейдите в десктоп версию
           </p>
-        </div>
+        </div> */}
       </body>
     </html>
   );

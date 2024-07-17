@@ -4,9 +4,8 @@ import { ReviewCardHeading } from "./ReviewCardHeading";
 
 export const ReviewCard = ({ text, author, avatar, position }: Review) => (
   <li
-    className={
-      "flex flex-col justify-between gap-[10px] w-[340px] text-left text-black bg-white rounded-md p-[24px] hover:shadow-xl transition-all duration-300"
-    }
+    className="flex flex-col justify-between gap-[10px] w-[340px] text-left text-black bg-white rounded-md p-[24px] hover:shadow-xl transition-all duration-300
+    max-sm:w-full max-sm:text-[15px]"
   >
     <ReviewCardHeading author={author} avatar={avatar} position={position} />
     <div className="flex-1">

@@ -22,7 +22,7 @@ export const FAQList = ({ faqs }: FAQListProps) => {
 
   return (
     <dl>
-      <ul className="w-full columns-2 gap-x-[46px] whitespace-break-spaces">
+      <ul className="w-full columns-2 gap-x-[46px] max-sm:columns-1">
         {faqs.map((faq, index) => (
           <FAQListItem
             key={faq.question}

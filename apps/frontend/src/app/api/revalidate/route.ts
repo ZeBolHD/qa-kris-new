@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { REVALIDATE_KEY } from "@lib/constants";
 import { revalidatePath } from "next/cache";
+import { apolloClient } from "@/lib/api/ApolloClient";
 
 export async function POST(request: NextRequest) {
   const revalidateKey = request.nextUrl.searchParams.get("revalidateKey");
@@ -16,6 +17,7 @@ export async function POST(request: NextRequest) {
 
   console.log("Revalidating...");
   revalidatePath("/");
+  apolloClient.resetStore();
 
   return NextResponse.json({
     statusText: "Revalidated",

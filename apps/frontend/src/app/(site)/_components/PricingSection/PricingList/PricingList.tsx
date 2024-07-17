@@ -6,7 +6,7 @@ interface PricingListProps {
 }
 
 export const PricingList = ({ services }: PricingListProps) => (
-  <ul className="flex w-fit mx-auto gap-[30px] justify-between">
+  <ul className="flex w-fit mx-auto gap-[30px] justify-between max-sm:flex-col">
     {services.map((service) => (
       <PricingListItem key={service.title} {...service} />
     ))}

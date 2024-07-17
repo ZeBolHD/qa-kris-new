@@ -7,7 +7,7 @@ interface AdvantageListProps {
 }
 
 export const AdvantageList = ({ advantages }: AdvantageListProps) => (
-  <ul className="w-full flex justify-between">
+  <ul className="w-full flex justify-between max-sm:flex-col max-sm:w-fit max-sm:mx-auto max-sm:gap-[35px]">
     {advantages.map((advantage) => (
       <AdvantageListItem key={advantage.heading} {...advantage} />
     ))}

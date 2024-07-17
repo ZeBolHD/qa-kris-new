@@ -35,6 +35,15 @@ export default async function HomePage() {
       <FAQSection {...faqSection} />
       <PricingSection {...pricingSection} />
       <GetStartedSection consultationLink={heroSection.link!} />
+
+      {/* <ReviewsSection {...reviewsSection} />
+      <AdvantagesSection {...advantagesSection} />
+      <ProgramSection {...programSection} />
+      <CompaniesSection {...companiesSection} />
+      <AboutSection {...aboutSection} />
+      <FAQSection {...faqSection} />
+      <PricingSection {...pricingSection} />
+      <GetStartedSection consultationLink={heroSection.link!} /> */}
     </>
   );
 }
