@@ -12,6 +12,7 @@ import {
 } from "./_components";
 
 import { apiClient } from "@/lib/api";
+import { Footer, Header } from "@/app/_components";
 
 export default async function HomePage() {
   const { data: heroSection } = await apiClient.getHeroSection();
@@ -25,25 +26,20 @@ export default async function HomePage() {
 
   return (
     <>
-      <BackgroundGradient />
-      <HeroSection {...heroSection} />
-      <ReviewsSection {...reviewsSection} />
-      <AdvantagesSection {...advantagesSection} />
-      <ProgramSection {...programSection} />
-      <CompaniesSection {...companiesSection} />
-      <AboutSection {...aboutSection} />
-      <FAQSection {...faqSection} />
-      <PricingSection {...pricingSection} />
-      <GetStartedSection consultationLink={heroSection.link!} />
-
-      {/* <ReviewsSection {...reviewsSection} />
-      <AdvantagesSection {...advantagesSection} />
-      <ProgramSection {...programSection} />
-      <CompaniesSection {...companiesSection} />
-      <AboutSection {...aboutSection} />
-      <FAQSection {...faqSection} />
-      <PricingSection {...pricingSection} />
-      <GetStartedSection consultationLink={heroSection.link!} /> */}
+      <Header />
+      <div className="overflow-x-hidden min-h-screen">
+        <BackgroundGradient />
+        <HeroSection {...heroSection} />
+        <ReviewsSection {...reviewsSection} />
+        <AdvantagesSection {...advantagesSection} />
+        <ProgramSection {...programSection} />
+        <CompaniesSection {...companiesSection} />
+        <AboutSection {...aboutSection} />
+        <FAQSection {...faqSection} />
+        <PricingSection {...pricingSection} />
+        <GetStartedSection consultationLink={heroSection.link!} />
+      </div>
+      <Footer />
     </>
   );
 }
