@@ -13,7 +13,6 @@ export const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log(window.scrollY);
       if (window.scrollY > 48) {
         setIsSticky(true);
       } else {
